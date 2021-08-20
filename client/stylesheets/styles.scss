@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+// had the css centered and aligned but unsure what changed.
+
+$font-stack: 'Noto Sans', sans-serif;
+
+html {
+  font-size: 1em;
+}
+
+body {
+  position: relative;
+  font-family: $font-stack;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 2em;
+  }
+  @media screen and (max-width: 800px) {
+    html {
+      font-size: 2vw;
+    }
+  }
+  @media screen and (min-width: 50em) {
+    html {
+      font-size: 1.5vw;
+    }
+  }
+  @media screen and (max-width: 25em) {
+    html {
+      font-size: 2vw;
+    }
+  }
+}
+
+.MainContainer {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  width: 90vw;
+}
+
+.grid-container {
+  padding-bottom: 75px;
+  --n:4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit ,minmax(max(350px, 100%/var(--n)), 1fr));
+  grid-gap: 1.5em;
+  width: 80%;
+  position: absolute;
+}
+
+.stablelogo {
+  width: 150px;
+  height: 100px;
+}
+
+.timestamp {
+  max-height: 20px;
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  border-top: 1px solid #606060;
+  float: right;
+  text-align: right;
+}
+
+.cardclass {
+  width: 400px;
+  height: 100%;
+  border: 1px solid #606060;
+  } 
+
+.cardcontent {
+  height: 250px;
+  border-top: 1px solid #606060;
+}
+
+.footer {
+  display: flexbox;
+  position: absolute;
+  bottom: 0;
+  width: 94%;
+}
+
+.bottomborder {
+  border-bottom: 1px solid #606060;
+}
+
+.nextButton {
+  float: right;
+  position: absolute;
+}
+
+.prevButton {
+  float: right;
+  position: absolute;
+}
+
+.assetImg {
+  width: 30px;
+  height: 30px;
+}
